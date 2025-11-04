@@ -1,0 +1,22 @@
+name: Bandit Scan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  bandit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Run Bandit Scanner
+        uses: reactive-firewall/python-bandit-scan@v2.3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: "."
+          level: high
+          confidence: high
+          exit_zero: true
