@@ -1,6 +1,7 @@
 name: "HCL AppScan CodeSweep"
 on:
-  repository_dispatch:
+  push:
+  pull_request:
   
 permissions: {}
 jobs:
