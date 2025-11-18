@@ -38,3 +38,5 @@ jobs:
           VALIDATE_PYTHON_MYPY: true
           VALIDATE_PYTHON_RUFF: true
           VALIDATE_PYTHON_RUFF_FORMAT: true
+          VALIDATE_TYPESCRIPT_ES: true
+          TYPESCRIPT_ES_CONFIG_FILE: "eslint.config.mjs"
